@@ -57,7 +57,7 @@ int main()
     int y2{};
     std::cin >> y2;
     
-    
+
     if(x1 > 0 && y2 > 0)
         std::cout << "Both numbers are positive" << '\n';
     else if(x1 > 0 || y2 > 0)
@@ -66,9 +66,12 @@ int main()
         std::cout << "Neither number is positive" << '\n';
 
     /*---------------------------------------------------
-             git push --set-upstream origin master
+         Operator== vs Operator= inside the conditional
     ---------------------------------------------------*/
-
+    /*
+    Inside your conditional, you should be using operator== when testing for equality, 
+    not operator= (which is assignment).
+    */
 
 
     return 0;
