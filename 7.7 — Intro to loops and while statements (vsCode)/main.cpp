@@ -151,7 +151,7 @@ int main()
         std::cout << count_3 << ' ';
 
         // if the loop variable is divisible by 10, print a newline
-        if (count_3 % 10 == 0)
+        if (count_3 % 5 == 0)
         {
             std::cout << '\n';
         }
