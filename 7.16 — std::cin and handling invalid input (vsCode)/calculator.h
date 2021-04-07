@@ -5,7 +5,7 @@
 
 double getDouble()
 {
-    std::cout << "Enter a double number: ";
+    std::cout << "[Original case] Enter a double number: ";
     double x{};
     std::cin >> x;
     return x;
@@ -13,7 +13,7 @@ double getDouble()
 
 char getOperator()
 {
-    std::cout << "Enter one of the following: +, -, *, or /: ";
+    std::cout << "[Original case] Enter one of the following: +, -, *, or /: ";
     char op{};
     std::cin >> op;
     return op;

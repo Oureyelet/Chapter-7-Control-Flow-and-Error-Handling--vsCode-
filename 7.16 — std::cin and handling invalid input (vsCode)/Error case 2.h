@@ -1,23 +1,30 @@
-#ifndef CAL_H1
-#define CAL_H1
+#ifndef CAL_H2
+#define CAL_H2
 
-#include <iostream>
+#include <limits> // for std::numeric_limits
 
-double getDouble1()
+void ignoreLine()
 {
-    std::cout << "[Error case 1] Enter a double number: ";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
+double getDouble2()
+{
+    std::cout << "[Error case 2] Enter a double number: ";
     double x{};
     std::cin >> x;
+    ignoreLine();
     return x;
 }
 
-char getOperator1()
+char getOperator2()
 {
         while(true)// Loop until user enters a valid input
         {
-            std::cout << "[Error case 1] Enter one of the following: +, -, *, or /: ";
+            std::cout << "[Error case 2] Enter one of the following: +, -, *, or /: ";
             char operation{};
             std::cin >> operation;
+            ignoreLine();
 
             // Check whether the user entered meaningful input
             switch(operation)
@@ -28,12 +35,12 @@ char getOperator1()
                 case '/':
                     return operation;// return it to the caller
                 default:// otherwise tell the user what went wrong
-                    std::cout << "[Error case 1] Oops, that input is invalid.  Please try again.\n";
+                    std::cout << "[Error case 2] Oops, that input is invalid.  Please try again.\n";
             }
         }// and try again
 }
 
-void printResult1(double x, char operation, double y)
+void printResult2(double x, char operation, double y)
 {
     switch (operation)
     {
@@ -52,5 +59,4 @@ void printResult1(double x, char operation, double y)
     }
 }
 
-#endif // end CAL_H1
-
+#endif // end CAL_H2
