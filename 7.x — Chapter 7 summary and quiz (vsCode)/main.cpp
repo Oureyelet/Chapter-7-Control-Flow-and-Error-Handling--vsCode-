@@ -14,6 +14,7 @@ int main()
     /*--------------------------------
                 Question #1
     --------------------------------*/
+    /*
     std::cout << "Enter the initial height of the tower in meters: ";
     double initialHeight;
     std::cin >> initialHeight;
@@ -21,6 +22,7 @@ int main()
     for(double count{ 0.0 }; calculateHeight(initialHeight, count) > 0; count +=  0.1)
 
     calculateAndPrintHeight(initialHeight, count);
+    */
 
     /*--------------------------------
                 Question #2

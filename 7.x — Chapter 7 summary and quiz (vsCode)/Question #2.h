@@ -42,11 +42,25 @@ int main()
  
     return 0;
 }
+2(2/1=2...2/2=1) 4
+3(3/1=3...3/3=1) 6
+5(5/1=5...5/5=1) 8
 */
 
-bool isPrime(int x)
+bool isPrime(int number)
 {
-    // write this function using a for loop
+    if(number < 2) 
+        return false;
+    if(number == 2) 
+        return true;
+    if(number % 2 == 0) 
+        return false;
+    for(int i{ 3 }; (i*i)<=number; i+=2)
+    {
+        if(number % i == 0 ) 
+        return false;
+    }
+    return true;
 }
 
 
